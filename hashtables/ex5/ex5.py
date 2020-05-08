@@ -4,6 +4,9 @@ def finder(files, queries):
     YOUR CODE HERE
     """
 
+    q_dict = {}
+    result = []
+
     return result
 
 

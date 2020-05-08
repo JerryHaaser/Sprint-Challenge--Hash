@@ -4,6 +4,23 @@ def intersection(arrays):
     YOUR CODE HERE
     """
 
+    
+
+    num_dict = {}
+    result = []
+    # sort arrays
+    arrays = sorted(arrays, key=lambda x: len(x))
+    # iterate through lists
+    # compare first value to all other values
+    # if all list contain this value, append to result
+    for element in arrays[0]:
+        num_dict[element] = 1
+    for array in arrays[1:]:
+        for element in array:
+            if element in num_dict:
+                num_dict[element] += 1
+    result = [num for num in num_dict if num_dict[num] == len(arrays)]
+
     return result
 
 
